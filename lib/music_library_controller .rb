@@ -80,7 +80,7 @@ class MusicLibraryController
     sorted_songs = Song.all.sort_by {|song| song.name}
     puts "Playing #{sorted_songs[input].name} by #{sorted_songs[input].artist.name}" 
     # if sorted_songs.include?(sorted_songs[input])
-    if input.between?(sorted_songs.first && sorted_songs.last)
+    if input.between?(sorted_songs.first...sorted_songs.last)
   end
 
 end
