@@ -78,9 +78,8 @@ class MusicLibraryController
     input = gets.strip.to_i - 1 
     # binding.pry
     sorted_songs = Song.all.sort_by {|song| song.name}
-    puts "Playing #{sorted_songs[input].name} by #{sorted_songs[input].artist.name}" 
-    # if sorted_songs.include?(sorted_songs[input])
-    if input.include?(sorted_songs.first...sorted_songs.last)
+    puts "Playing #{sorted_songs[input].name} by #{sorted_songs[input].artist.name}" if sorted_songs.include?(sorted_songs[input])
+    
   end
 
 end
