@@ -75,7 +75,6 @@ class MusicLibraryController
 
   def play_song 
     puts "Which song number would you like to play?" 
-    # puts list_songs 
     input = gets.strip.to_i - 1 
     # binding.pry
     sorted_songs = Song.all.sort_by {|song| song.name}
